@@ -1,0 +1,233 @@
+/* General app styling */
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color:#010e1a;
+  min-height: 100vh;
+  padding: 20px;}
+/* ===== Login Screen Container ===== */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+   margin-top: 0;          /* navbar ke baad gap hatao */
+  padding-top: 10px;      /* halka sa breathing space */
+  text-align: center;
+  font-family: Arial, sans-serif;
+   background-color:#010e1a;
+  min-height: calc(100vh - 60px);
+}
+
+/* Title */
+.app h1 {
+  margin-bottom: 25px;
+  color: #ae1c1c;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Player name inputs */
+.app input {
+  width: 260px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+/* Focus effect */
+.app input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* Start Game button */
+.app .congrats-btn {
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #222;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  transition: 0.3s ease;
+}
+
+/* Button hover */
+.app .congrats-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.45);
+}
+
+/* Small animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation */
+.app h1,
+.app input,
+.app .congrats-btn {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+h1 {
+  color: #222;
+}
+
+.last-move {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.last-move.red { color: red; }
+.last-move.green { color: green; }
+.last-move.blue { color: blue; }
+.last-move.yellow { color: gold; }
+
+/* Board styling */
+.board {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.player-card {
+  border-radius: 12px;
+  padding: 15px;
+  width: 140px;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-card.red { border: 3px solid red; }
+.player-card.green { border: 3px solid green; }
+.player-card.blue { border: 3px solid blue; }
+.player-card.yellow { border: 3px solid gold; }
+
+/* Buttons */
+.roll-btn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.roll-btn.red { background-color: red; }
+.roll-btn.green { background-color: green; }
+.roll-btn.blue { background-color: blue; }
+.roll-btn.yellow { background-color: gold; }
+
+/* Congrats button */
+.congrats-btn {
+  background: #ffdd57;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.congrats-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+}
+
+/* Task box below the button */
+.task-box {
+  margin-top: 15px;       /* button ke niche space */
+  display: inline-block;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.2);
+  animation: taskPop 0.4s ease-in-out;
+}
+
+/* Animation for task box pop effect */
+@keyframes taskPop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Container for congrats section */
+.congrats-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.name-logo {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: #fc5e5e;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.lpgin {
+  height: 600px;
+  width: 500px;
+
+  margin: 80px auto;          /* center horizontally */
+  padding: 30px;
+
+  background: #5e1b1b;
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
